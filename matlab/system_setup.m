@@ -100,29 +100,29 @@ deriv.m_eta = -147.6913;
 deriv.m_tau = 0;
 
 %Lateral
-% deriv.y_v = 
-% deriv.y_p =
-% deriv.y_r =
-% deriv.y_phi =
-% deriv.y_psi =
-% deriv.y_xi =
-% deriv.y_zeta = 
-% 
-% deriv.l_v = 
-% deriv.l_p =
-% deriv.l_r =
-% deriv.l_phi =
-% deriv.l_psi =
-% deriv.l_xi =
-% deriv.l_zeta = 
-% 
-% deriv.n_v = 
-% deriv.n_p =
-% deriv.n_r =
-% deriv.n_phi =
-% deriv.n_psi =
-% deriv.n_xi =
-% deriv.n_zeta = 
+deriv.y_v = -0.7684;
+deriv.y_p = 0;
+deriv.y_r = -1;
+deriv.y_phi = 0.4905;
+deriv.y_psi = 0; % missing, assumed negligible;
+deriv.y_xi = 0;
+deriv.y_zeta = 0.2591;
+
+deriv.l_v = -1.7563;
+deriv.l_p = -47.4848;
+deriv.l_r = 0.3362;
+deriv.l_phi = 0;
+deriv.l_psi = 0; % missing, assumed negligible;
+deriv.l_xi = 1150.2319;
+deriv.l_zeta = 5.0475;
+
+deriv.n_v = 326.1682;
+deriv.n_p = -17.9588;
+deriv.n_r = -12.1661;
+deriv.n_phi = 0;
+deriv.n_psi = 0; % missing, assumed negligible;
+deriv.n_xi = -95.1241;
+deriv.n_zeta = -205.6651;
 
 % Initial conditions (stable, trimmed flight)
 
