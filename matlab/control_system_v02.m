@@ -7,7 +7,7 @@ clc; clear all; close all;
 system_setup;
 
 %% State Space equations of motion (small peturbations)
-height_augmented = false;
+height_augmented = true;
 
 % ------------------------------------------------------------------------
 %%% Longitudinal
