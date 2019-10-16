@@ -14,7 +14,7 @@ sys.A.long = [	deriv.x_u, 	deriv.x_w,	deriv.x_q,	deriv.x_theta,  0 ;
                 deriv.z_u,	deriv.z_w,	deriv.z_q,	deriv.z_theta,  0 ;
                 deriv.m_u, 	deriv.m_w,	deriv.m_q,	deriv.m_theta,  0 ;
                 0,         	0,          1,          0,              0 ;
-                0,         	-1,         0,          env.V_0,        0 ];
+                deriv.th_u, deriv.th_w, deriv.th_q, env.V_0,        0 ];
 
 sys.B.long = [ 	deriv.x_eta,    deriv.x_tau     ;
                 deriv.z_eta,    deriv.z_tau     ;

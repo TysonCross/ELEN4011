@@ -2,7 +2,7 @@
 %%% Environment properties
 env.rho = 1.225;                % Air Density (at Sea Level, STP) [kg/m^3]
 env.g = 9.81;                   % Gravity [m/s^2]
-env.V_0 = 20;                   % Speed [m/s]
+env.V_0 = 40/3.6;               % Speed [m/s]
 env.h = 100;                    % Height [m]
 
 %%% UltraStick 25e geometric properties
@@ -42,6 +42,10 @@ deriv.m_theta = 0;
 deriv.m_h = 0;
 deriv.m_eta = 0.2546;
 deriv.m_tau = -49.7923;
+
+deriv.th_u = -0.523;
+deriv.th_w = -0.9986;
+deriv.th_q = 0;
 
 %Lateral
 deriv.y_v = -0.9512;
