@@ -27,16 +27,22 @@ sys.C.long =  eye(5);
 sys.D.long = zeros(size(sys.C.long,1),size(sys.B.long,2));
 
 sys.SS.long = ss(sys.A.long, sys.B.long, sys.C.long, sys.D.long, ...
+    'Name', 'Longitude model', ...
     'StateName', {'u'; 'w'; 'q'; 'theta'; 'h'}, ...
     'InputName', {'elevator'; 'throttle'}, ...
     'OutputName', {'x'; 'z'; 'pitch rate'; 'pitch angle'; 'height'});
 
 sys.TF.long = tf(sys.SS.long);
 
-sys.poles.long = pole(sys.TF.long);
-figs.fig1 = figure('Position',[1240,120,650,700], ...
+sys.poles.long = eig(sys.SS.long);
+figs.long.fig1 = figure('Position',[1240,120,650,700], ...
     'Name', 'Longitudinal Step Response');
 step(sys.TF.long,50);
+
+figs.long.fig2 = figure('Position',[680,490,550,325], ...
+    'Name', 'Longitudinal Pole Zero Map');
+pzmap(sys.SS.long);
+grid on;
 
 % check observability/controlability
 if size(sys.A.long,1)==rank(ctrb(sys.A.long, sys.B.long)) 
@@ -76,16 +82,22 @@ sys.C.lat =  eye(5);
 sys.D.lat = zeros(size(sys.C, 1), size(sys.B, 2));
 
 sys.SS.lat = ss(sys.A.lat, sys.B.lat, sys.C.lat, sys.D.lat, ...
+    'Name', 'Lateral model', ...
     'StateName', {'v'; 'p'; 'r'; 'phi'; 'psi'}, ...
     'InputName', {'aerilons'; 'rudder'}, ...
     'OutputName', {'v'; 'roll rate'; 'yaw rate'; 'roll angle'; 'yaw angle'});
 
 sys.TF.lat = tf(sys.SS.lat);
 
-sys.poles.lat = pole(sys.TF.lat);
-figs.fig2 = figure('Position', [1900,120,650,700], ...
+sys.poles.lat = eig(sys.SS.lat);
+figs.lat.fig1 = figure('Position', [1900,120,650,700], ...
     'Name', 'Latitudinal Step Response');
 step(sys.TF.lat, 50);
+
+figs.lat.fig2 = figure('Position',[680,60,550,325], ...
+    'Name', 'Latitudinal Pole Zero Map');
+pzmap(sys.SS.lat);
+grid on;
 
 % check observability/controlability
 if size(sys.A.lat, 1)==rank(ctrb(sys.A.lat, sys.B.lat)) 
@@ -104,3 +116,5 @@ sys.num.lat = sys.TF.lat.Numerator;
 sys.den.lat = sys.TF.lat.Denominator;
 
 sys.SS.lat
+pzmap(sys.SS.lat)
+grid on;
