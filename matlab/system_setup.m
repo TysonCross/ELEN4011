@@ -14,7 +14,7 @@ geometry.cg = [0;0;0];          % Centre of gravity (x,y,z)
 geometry.inertia.Ix = 0.0895; 	% Inertial Moment (x) [kg.m^2]
 geometry.inertia.Iy = 0.1444;	% Inertial Moment (y) [kg.m^2]
 geometry.inertia.Iz = 0.1620;  	% Inertial Moment (x) [kg.m^2]
-geometry.inertia.Ixz = 0.0140; 	% Inertial Moment (pitching/yaw) [kg.m^2]
+geometry.inertia.Ixz = 0.0140; 	% Inertial Moment (planar) [kg.m^2]
 
 %%% Stability derivative coefficients 
 % Dimensionless derivatives (with ref to Body axes)
