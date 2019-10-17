@@ -125,5 +125,5 @@ actuators.dampingRatio = 0.75;
 actuators.TF = tf(actuators.num,actuators.den)
 
 actuators.thrust.gain = 1;
-actuators.thrust.T_tau = 0.1;
+actuators.thrust.T_tau = 0.01;
 actuators.thrust.TF = tf(actuators.thrust.gain,[-actuators.thrust.T_tau 1]);
