@@ -34,7 +34,7 @@ sys.long.SS = ss(sys.long.A, sys.long.B, sys.long.C, sys.long.D, ...
 
 sys.long.TF = tf(sys.long.SS);
 
-sys.long.poles = eig(sys.long.SS);
+sys.long.poles = sort(eig(sys.long.SS));
 figs.long.fig1 = figure('Position',[1240,120,650,700], ...
     'Name', 'Longitudinal Step Response');
 step(sys.long.TF,50);
@@ -61,6 +61,12 @@ sys.long.num = sys.long.TF.Numerator;
 sys.long.den = sys.long.TF.Denominator;
 
 sys.long.SS
+damp(sys.long.SS)
+disp(' ')
+disp('Phugoid mode: low damping, low frequency, long period')
+disp('Short-Period mode: higher damping, short period')
+disp(' ')
+sys.long.phugoid = zpk([], [sys.long.poles(2) sys.long.poles(3)], 1);
 
 disp('======================= Lateral EOM ==============================')
 % ------------------------------------------------------------------------
@@ -89,7 +95,8 @@ sys.lat.SS = ss(sys.lat.A, sys.lat.B, sys.lat.C, sys.lat.D, ...
 
 sys.lat.TF = tf(sys.lat.SS);
 
-sys.lat.poles = eig(sys.lat.SS);
+sys.lat.poles = sort(eig(sys.lat.SS));
+
 figs.lat.fig1 = figure('Position', [1900,120,650,700], ...
     'Name', 'Latitudinal Step Response');
 step(sys.lat.TF, 50);
@@ -116,13 +123,17 @@ sys.lat.num = sys.lat.TF.Numerator;
 sys.lat.den = sys.lat.TF.Denominator;
 
 sys.lat.SS
+% damp(sys.lat.SS)
 pzmap(sys.lat.SS)
 grid on;
 
+% ------------------------------------------------------------------------
+% Actuators (all modelled as 2nd order systems with the same coefficents)
+
 actuators.naturalFreq = 35;
 actuators.dampingRatio = 0.75;
-[actuators.num, actuators.den]= ord2(35,0.75)
-actuators.TF = tf(actuators.num,actuators.den)
+[actuators.num, actuators.den]= ord2(35,0.75);
+actuators.TF = tf(actuators.num,actuators.den);
 
 actuators.thrust.gain = 1;
 actuators.thrust.T_tau = 0.01;
