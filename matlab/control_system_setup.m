@@ -67,6 +67,7 @@ disp('Phugoid mode: low damping, low frequency, long period')
 disp('Short-Period mode: higher damping, short period')
 disp(' ')
 sys.long.phugoid = zpk([], [sys.long.poles(2) sys.long.poles(3)], 1);
+sys.long.sp = zpk([], [sys.long.poles(4) sys.long.poles(5)], 1);
 
 disp('======================= Lateral EOM ==============================')
 % ------------------------------------------------------------------------
@@ -138,3 +139,9 @@ actuators.TF = tf(actuators.num,actuators.den);
 actuators.thrust.gain = 1;
 actuators.thrust.T_tau = 0.01;
 actuators.thrust.TF = tf(actuators.thrust.gain,[-actuators.thrust.T_tau 1]);
+
+
+% -----------------------------------------------------------------------
+% PIDs (values taken from Simulink tuned controllers)
+pids.pitch = tf(pid( 7.25749605779279, 2.78399941784119, 4.69900154341756));
+pids.height = tf(pid( 0.0394284340423091, 0.000147333496020652, -0.0144298382924662));
