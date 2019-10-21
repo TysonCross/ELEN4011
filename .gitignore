@@ -782,3 +782,7 @@ maya/MultiplexMentor/images/ai_bake/
 maya/MultiplexMentor/autosave/
 
 matlab/examples/*
+
+*.slxc
+
+*.autosave
