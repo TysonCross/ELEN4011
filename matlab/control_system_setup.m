@@ -66,8 +66,8 @@ disp(' ')
 disp('Phugoid mode: low damping, low frequency, long period')
 disp('Short-Period mode: higher damping, short period')
 disp(' ')
-sys.long.phugoid = zpk([], [sys.long.poles(2) sys.long.poles(3)], 1);
-sys.long.sp = zpk([], [sys.long.poles(4) sys.long.poles(5)], 1);
+sys.long.modes.phugoid = tf(zpk([], [sys.long.poles(2) sys.long.poles(3)], 1));
+sys.long.modes.sp = tf(zpk([], [sys.long.poles(4) sys.long.poles(5)], 1));
 
 disp('======================= Lateral EOM ==============================')
 % ------------------------------------------------------------------------
@@ -124,7 +124,16 @@ sys.lat.num = sys.lat.TF.Numerator;
 sys.lat.den = sys.lat.TF.Denominator;
 
 sys.lat.SS
-% damp(sys.lat.SS)
+damp(sys.lat.SS)
+disp(' ')
+disp('Spiral mode:  lowest frequency')
+disp('Dutch roll mode: oscilatory motion coupling yaw and roll')
+disp('Roll subsidence mode: highest frequency')
+disp(' ')
+sys.lat.modes.spiral = tf(zpk([], sys.lat.poles(2), 1));
+sys.lat.modes.roll = tf(zpk([], sys.lat.poles(3), 1));
+sys.lat.modes.dutch = tf(zpk([], [sys.lat.poles(4) sys.lat.poles(5)], 1));
+
 pzmap(sys.lat.SS)
 grid on;
 
