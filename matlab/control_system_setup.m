@@ -152,5 +152,12 @@ actuators.thrust.TF = tf(actuators.thrust.gain,[-actuators.thrust.T_tau 1]);
 
 % -----------------------------------------------------------------------
 % PIDs (values taken from Simulink tuned controllers)
-pids.pitch = tf(pid( 7.25749605779279, 2.78399941784119, 4.69900154341756));
-pids.height = tf(pid( 0.0394284340423091, 0.000147333496020652, -0.0144298382924662));
+pids.pitch = pid( 7.25749605779279, 2.78399941784119, 4.69900154341756);
+pids.height = pid( 0.0394284340423091, 0.000147333496020652, -0.0144298382924662);
+pids.yaw = pid(1.21069845200907,0.0055970895188787,0.229410917426781,5.54692256878503);
+pids.roll = pid(13.8346091340675,2.4410545354894);
+
+sys.long.elevator_pitch = sys.long.TF(3,1);
+sys.lat.airelons_yaw = sys.lat.TF(3,1);
+sys.lat.rudder_yaw = sys.lat.TF(3,2);
+
