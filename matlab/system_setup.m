@@ -1,3 +1,7 @@
+%% ELEN4011 Engineering Design
+% Data for UAV airframe and modelling
+% Tyson Cross       1239448
+
 %% Data
 %%% Environment properties
 env.rho = 1.225;                % Air Density (at Sea Level, STP) [kg/m^3]
