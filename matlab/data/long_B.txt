@@ -1,0 +1,10 @@
+\begin{tiny}\begin{tabular}{|l|c|c|}
+\hline
+&\textbf{elevator}&\textbf{throttle}\\\hline
+\textbf{u}&8.49&0.00\\\hline
+\textbf{w}&0.00&-1.66\\\hline
+\textbf{q}&0.25&-49.79\\\hline
+\textbf{theta}&0.00&0.00\\\hline
+\textbf{h}&0.00&0.00\\\hline
+\end{tabular}
+\end{tiny}

@@ -1,0 +1,10 @@
+\begin{tiny}\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+&\textbf{u}&\textbf{w}&\textbf{q}&\textbf{theta}&\textbf{h}\\\hline
+\textbf{u}&-0.15&0.15&0.00&-9.81&0.00\\\hline
+\textbf{w}&-0.53&-5.30&11.11&0.00&0.00\\\hline
+\textbf{q}&2.67&-3.38&-32.91&0.00&0.00\\\hline
+\textbf{theta}&0.00&0.00&1.00&0.00&0.00\\\hline
+\textbf{h}&-0.52&-1.00&0.00&11.11&0.00\\\hline
+\end{tabular}
+\end{tiny}

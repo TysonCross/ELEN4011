@@ -7,7 +7,6 @@ clc; clear all; close all;
 system_setup;
 
 %% State Space equations of motion (small peturbations)
-% ------------------------------------------------------------------------
 %%% Longitudinal
 disp('==================== Longitudinal EOM ============================')
 sys.long.A = [	deriv.x_u, 	deriv.x_w,	deriv.x_q,	deriv.x_theta,  0 ;
@@ -44,6 +43,8 @@ figs.long.fig2 = figure('Position',[680,490,550,325], ...
 pzmap(sys.long.SS);
 grid on;
 
+
+
 % check observability/controlability
 if size(sys.long.A,1)==rank(ctrb(sys.long.A, sys.long.B)) 
     disp('The LTI system is controllable')
@@ -70,7 +71,6 @@ sys.long.modes.phugoid = tf(zpk([], [sys.long.poles(2) sys.long.poles(3)], 1));
 sys.long.modes.sp = tf(zpk([], [sys.long.poles(4) sys.long.poles(5)], 1));
 
 disp('======================= Lateral EOM ==============================')
-% ------------------------------------------------------------------------
 %%% Lateral
 sys.lat.A = [   deriv.y_v,	deriv.y_p,	deriv.y_r,	deriv.y_phi,    deriv.y_psi ;
                 deriv.l_v,	deriv.l_p,	deriv.l_r,	deriv.l_phi,    deriv.l_psi ;
@@ -137,7 +137,7 @@ sys.lat.modes.dutch = tf(zpk([], [sys.lat.poles(4) sys.lat.poles(5)], 1));
 pzmap(sys.lat.SS)
 grid on;
 
-% ------------------------------------------------------------------------
+%------------------------------------------------------------------
 % Actuators (all modelled as 2nd order systems with the same coefficents)
 
 actuators.naturalFreq = 35;
@@ -150,7 +150,7 @@ actuators.thrust.T_tau = 0.01;
 actuators.thrust.TF = tf(actuators.thrust.gain,[-actuators.thrust.T_tau 1]);
 
 
-% -----------------------------------------------------------------------
+% -------------------------------------------------------
 % PIDs (values taken from Simulink tuned controllers)
 pids.pitch = pid( 7.25749605779279, 2.78399941784119, 4.69900154341756);
 pids.height = pid( 0.0394284340423091, 0.000147333496020652, -0.0144298382924662);

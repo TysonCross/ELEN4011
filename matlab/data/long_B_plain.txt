@@ -1,0 +1,9 @@
+\begin{tiny}\begin{tabular}{|c|c|}
+\hline
+8.49&0.00\\\hline
+0.00&-1.66\\\hline
+0.25&-49.79\\\hline
+0.00&0.00\\\hline
+0.00&0.00\\\hline
+\end{tabular}
+\end{tiny}

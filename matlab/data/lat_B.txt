@@ -1,0 +1,10 @@
+\begin{tiny}\begin{tabular}{|l|c|c|}
+\hline
+&\textbf{aerilons}&\textbf{rudder}\\\hline
+\textbf{v}&0.00&0.22\\\hline
+\textbf{p}&21.65&4.49\\\hline
+\textbf{r}&-0.25&-5.71\\\hline
+\textbf{phi}&0.00&0.00\\\hline
+\textbf{psi}&0.00&0.00\\\hline
+\end{tabular}
+\end{tiny}

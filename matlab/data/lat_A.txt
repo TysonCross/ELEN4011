@@ -1,0 +1,10 @@
+\begin{tiny}\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+&\textbf{v}&\textbf{p}&\textbf{r}&\textbf{phi}&\textbf{psi}\\\hline
+\textbf{v}&-0.95&0.00&-1.00&0.88&0.00\\\hline
+\textbf{p}&-12.02&-7.47&5.87&0.00&0.00\\\hline
+\textbf{r}&5.04&-1.94&-6.60&0.00&0.00\\\hline
+\textbf{phi}&0.00&1.00&0.00&0.00&0.00\\\hline
+\textbf{psi}&0.00&0.00&1.00&0.00&0.00\\\hline
+\end{tabular}
+\end{tiny}

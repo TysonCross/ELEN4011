@@ -1,0 +1,10 @@
+\begin{tiny}\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+&\textbf{u}&\textbf{w}&\textbf{q}&\textbf{theta}&\textbf{h}\\\hline
+\textbf{x}&1.00&0.00&0.00&0.00&0.00\\\hline
+\textbf{z}&0.00&1.00&0.00&0.00&0.00\\\hline
+\textbf{pitch rate}&0.00&0.00&1.00&0.00&0.00\\\hline
+\textbf{pitch angle}&0.00&0.00&0.00&1.00&0.00\\\hline
+\textbf{height}&0.00&0.00&0.00&0.00&1.00\\\hline
+\end{tabular}
+\end{tiny}
