@@ -20,6 +20,11 @@ geometry.inertia.Iy = 0.1444;	% Inertial Moment (y) [kg.m^2]
 geometry.inertia.Iz = 0.1620;  	% Inertial Moment (x) [kg.m^2]
 geometry.inertia.Ixz = 0.0140; 	% Inertial Moment (planar) [kg.m^2]
 
+%% Control Surface properties
+geometry.elevator.limits = deg2rad([20,-20]);   % physical limits
+geometry.airelon.limits = deg2rad([23,-23]);    % physical limits
+geometry.rudder.limits = deg2rad([25,-25]);     % physical limits
+
 %%% Stability derivative coefficients 
 % Dimensionless derivatives (with ref to Body axes)
 % Longitudinal

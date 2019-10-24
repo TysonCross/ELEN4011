@@ -44,7 +44,6 @@ pzmap(sys.long.SS);
 grid on;
 
 
-
 % check observability/controlability
 if size(sys.long.A,1)==rank(ctrb(sys.long.A, sys.long.B)) 
     disp('The LTI system is controllable')
@@ -148,7 +147,6 @@ actuators.TF = tf(actuators.num,actuators.den);
 actuators.thrust.gain = 1;
 actuators.thrust.T_tau = 0.01;
 actuators.thrust.TF = tf(actuators.thrust.gain,[-actuators.thrust.T_tau 1]);
-
 
 % -------------------------------------------------------
 % PIDs (values taken from Simulink tuned controllers)
