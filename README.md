@@ -9,7 +9,7 @@ Decoupled Altitude and Direction Autopilot Controller Design for a Fixed-wing Un
 Tyson Cross
 </p>
 <p align="center">
-Supervisor:  Proj van Wyk  
+Supervisor:  Prof van Wyk  
 </p>
 
 ## Legal notice
@@ -33,7 +33,7 @@ Archive and copies of all report related materials, includig a digital version o
 ## matlab
 Contains the setup scripts for the simulink simulations. Run control_system_setup.m to load the system variables into the workspace.
 The simulink files for the latitidunal and lateral systems are PID_controller_long.slx and PID_controller_lat.slx respectively.
-The project was deleveloped on Matlab 2019a R3, running ona an academic site lisence, on a workstation running Ubuntu 18.04
+The project was deleveloped on Matlab 2019a R3, running ona an academic site licence, on a workstation running Ubuntu 18.04
 
 ## icons
 Support for the icon masks for the EoM in simulink
